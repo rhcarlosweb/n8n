@@ -1,0 +1,9 @@
+.n8n/
+.env
+*.log
+.DS_Store
+.vscode/
+.idea/
+backups/
+
+
