@@ -29,6 +29,7 @@ services:
       - PUPPETEER_SKIP_CHROMIUM_DOWNLOAD=true
       - NODE_FUNCTION_ALLOW_EXTERNAL=puppeteer,puppeteer-extra,puppeteer-extra-plugin-stealth,axios,https-proxy-agent,http-proxy-agent
       - NODE_FUNCTION_ALLOW_BUILTIN=fs,path,url,util,stream,crypto,http,https,os
+      - N8N_ENFORCE_SETTINGS_FILE_PERMISSIONS=true
     volumes:
       - ./.n8n:/home/node/.n8n
     depends_on:
@@ -42,7 +43,7 @@ services:
       dockerfile: Dockerfile
     container_name: n8n-worker-1
     restart: unless-stopped
-    command: n8n worker
+    command: worker
     environment:
       - N8N_HOST=${N8N_HOST:-localhost}
       - N8N_PORT=5678
@@ -59,6 +60,7 @@ services:
       - PUPPETEER_SKIP_CHROMIUM_DOWNLOAD=true
       - NODE_FUNCTION_ALLOW_EXTERNAL=puppeteer,puppeteer-extra,puppeteer-extra-plugin-stealth,axios,https-proxy-agent,http-proxy-agent
       - NODE_FUNCTION_ALLOW_BUILTIN=fs,path,url,util,stream,crypto,http,https,os
+      - N8N_ENFORCE_SETTINGS_FILE_PERMISSIONS=true
     volumes:
       - ./.n8n:/home/node/.n8n
     depends_on:
@@ -73,7 +75,7 @@ services:
       dockerfile: Dockerfile
     container_name: n8n-worker-2
     restart: unless-stopped
-    command: n8n worker
+    command: worker
     environment:
       - N8N_HOST=${N8N_HOST:-localhost}
       - N8N_PORT=5678
@@ -90,6 +92,7 @@ services:
       - PUPPETEER_SKIP_CHROMIUM_DOWNLOAD=true
       - NODE_FUNCTION_ALLOW_EXTERNAL=puppeteer,puppeteer-extra,puppeteer-extra-plugin-stealth,axios,https-proxy-agent,http-proxy-agent
       - NODE_FUNCTION_ALLOW_BUILTIN=fs,path,url,util,stream,crypto,http,https,os
+      - N8N_ENFORCE_SETTINGS_FILE_PERMISSIONS=true
     volumes:
       - ./.n8n:/home/node/.n8n
     depends_on:
@@ -104,7 +107,7 @@ services:
       dockerfile: Dockerfile
     container_name: n8n-worker-3
     restart: unless-stopped
-    command: n8n worker
+    command: worker
     environment:
       - N8N_HOST=${N8N_HOST:-localhost}
       - N8N_PORT=5678
@@ -121,6 +124,7 @@ services:
       - PUPPETEER_SKIP_CHROMIUM_DOWNLOAD=true
       - NODE_FUNCTION_ALLOW_EXTERNAL=puppeteer,puppeteer-extra,puppeteer-extra-plugin-stealth,axios,https-proxy-agent,http-proxy-agent
       - NODE_FUNCTION_ALLOW_BUILTIN=fs,path,url,util,stream,crypto,http,https,os
+      - N8N_ENFORCE_SETTINGS_FILE_PERMISSIONS=true
     volumes:
       - ./.n8n:/home/node/.n8n
     depends_on:
@@ -135,7 +139,7 @@ services:
       dockerfile: Dockerfile
     container_name: n8n-worker-4
     restart: unless-stopped
-    command: n8n worker
+    command: worker
     environment:
       - N8N_HOST=${N8N_HOST:-localhost}
       - N8N_PORT=5678
@@ -152,6 +156,7 @@ services:
       - PUPPETEER_SKIP_CHROMIUM_DOWNLOAD=true
       - NODE_FUNCTION_ALLOW_EXTERNAL=puppeteer,puppeteer-extra,puppeteer-extra-plugin-stealth,axios,https-proxy-agent,http-proxy-agent
       - NODE_FUNCTION_ALLOW_BUILTIN=fs,path,url,util,stream,crypto,http,https,os
+      - N8N_ENFORCE_SETTINGS_FILE_PERMISSIONS=true
     volumes:
       - ./.n8n:/home/node/.n8n
     depends_on:

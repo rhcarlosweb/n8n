@@ -87,3 +87,5 @@ echo "Para ver os logs: docker-compose logs -f n8n"
 echo ""
 
 
+
+
